@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_firebase/common/utils/app_colors.dart';
+import 'package:whatsapp_firebase/common/widgets/custom_elevated_button.dart';
+import 'package:whatsapp_firebase/feature/welcome/widgets/privacy_and_terms.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -41,22 +43,9 @@ class WelcomePage extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 30),
-                    width: MediaQuery.of(context).size.width - 100,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: AppColors.greenDark,
-                          foregroundColor: AppColors.backgroundColor,
-                          splashFactory: NoSplash.splashFactory,
-                          elevation: 0,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          shadowColor: Colors.transparent),
-                      onPressed: () {},
-                      child: const Text(' AGREE & CONTINUE'),
-                    ),
+                  CustomElevatedButton(
+                    onPressed: () {},
+                    text: 'AGREE & CONTINUE',
                   ),
                   const SizedBox(
                     height: 20,
@@ -105,43 +94,6 @@ class WelcomePage extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class PrivacyAndTerms extends StatelessWidget {
-  const PrivacyAndTerms({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
-      child: RichText(
-        textAlign: TextAlign.center,
-        text: const TextSpan(
-          style: TextStyle(height: 1.5),
-          children: [
-            TextSpan(
-              text: 'By continuing, you agree to our ',
-              style: TextStyle(color: Colors.grey),
-            ),
-            TextSpan(
-              text: 'Terms of Service',
-              style: TextStyle(color: AppColors.blueDark),
-            ),
-            TextSpan(
-              text: ' and ',
-              style: TextStyle(color: Colors.grey),
-            ),
-            TextSpan(
-              text: 'Privacy Policy',
-              style: TextStyle(color: AppColors.blueDark),
-            ),
-          ],
-        ),
       ),
     );
   }
