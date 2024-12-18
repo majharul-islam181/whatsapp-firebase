@@ -18,15 +18,6 @@ class CustomElevatedButton extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 30),
       width: buttonWidth ?? MediaQuery.of(context).size.width - 100,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-            backgroundColor: AppColors.greenDark,
-            foregroundColor: AppColors.backgroundColor,
-            splashFactory: NoSplash.splashFactory,
-            elevation: 0,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-            shadowColor: Colors.transparent),
         onPressed: onPressed,
         child: Text(text),
       ),
