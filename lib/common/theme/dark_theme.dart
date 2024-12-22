@@ -14,5 +14,15 @@ ThemeData darkTheme() {
         shadowColor: Colors.transparent,
       ),
     ),
+    bottomSheetTheme: const BottomSheetThemeData(
+      backgroundColor: AppColors.greyBackground,
+      modalBackgroundColor: AppColors.greyBackground,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
+      ),
+    ),
   );
 }
